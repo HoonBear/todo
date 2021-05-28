@@ -1,0 +1,41 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App JavaScript | CodingNepal</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron page-header" style="background: none; border:none; width:100%; padding:0">
+      <h2 style="margin:0;">😎 버킷리스트 😎</h2>
+    </div>
+    <form>
+      <div class="form-group">
+        <input type="text" id="title" class="form-control" placeholder="+ 새로운 일 😍 ">
+      </div>
+      <div class="form-group">
+        <input type="date" id="due-date" class="form-control" data-placeholder="+ 언제 ???" required aria-required="true">
+      </div>
+      <div class="row">
+        <div class="col-xs-3 pull-left" style="width:150px">
+          <button type="button" class="btn btn-secondary" onclick="newElement()">추가하기 👍</button>
+        </div>
+        <div class="col-lg-6 pull-right">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="tasks">
+    <ul id="task-list">
+    </ul>
+  </div>
+  <ul id="pagination" class="pagination pagination-lg"></ul>
+  <script src="javascripts/index.js"></script>
+</body>
+
+</html>

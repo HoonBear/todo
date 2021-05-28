@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  min-width: 250px;
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+*{
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+a {
+  display: inline-block;
+}
+
+.tasks {
+  margin: 30px 5px 5px 5px;
+}
+
+.tasks ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tasks ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 12px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.tasks ul li {
+  background: none;
+  border-bottom: 1px solid #eee;
+}
+
+.tasks ul li p{
+  margin: 0 0 0px
+}
+
+.tasks ul li:hover {
+  background: #ddd;
+}
+
+.dropdown-list {
+  padding: 5px 10px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.jumbotron{
+  background-color: none !important;
+  text-align: left;
+  color: black;
+}
+
+.jumbotron h2{
+  color:black
+}
+
+.btn-primary,
+.btn-success {
+  width: 100%;
+}
+
+.pagination {
+  padding-left: 40px !important;
+  cursor: pointer !important;
+}
+
+.form-group input{
+  background-color: #efefef !important;
+}
+
+.active a{
+  background: white !important;
+  border:1px solid black !important;
+  color:black !important;
+  cursor: pointer;
+}
+
+.active a:hover{
+  background-color: #333333 !important;
+  color:white !important;
+  cursor: pointer;
+}
+
+.active li a{
+  background: white !important;
+  border:1px solid black !important;
+  color:black !important;
+  cursor: pointer;
+}
+
+.active li a:hover{
+  background-color: #333333 !important;
+  color:white !important;
+  cursor: pointer;
+}
+
+input[type="date"]::before {content:attr(data-placeholder);width:100%; color:darkgray}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {display:none}
