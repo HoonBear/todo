@@ -3,7 +3,7 @@ let todoList = [];
 $(document).ready(function(){
     $.ajax({
         type : "GET",
-        url : "http://localhost:3000/getList",
+        url : "http://3.34.47.52:3000/getList",
         dataType : "text",
         error : function(){
             alert('통신실패!!');
@@ -43,7 +43,7 @@ function newElement() {
 
     $.ajax({
         type : "GET",
-        url : `http://localhost:3000/postList?id=todo${newTodoId}&todo=${todo}`,
+        url : `http://3.34.47.52:3000/postList?id=todo${newTodoId}&todo=${todo}`,
         dataType : "text"
     });
 
@@ -74,7 +74,7 @@ function deleteElement(event) {
     let idOfEltToBeDeleted = event.target.parentElement.id;
     $.ajax({
         type : "GET",
-        url : `http://localhost:3000/deleteList?id=${idOfEltToBeDeleted}`,
+        url : `http://3.34.47.52:3000/deleteList?id=${idOfEltToBeDeleted}`,
         dataType : "text"
     });
     let arrayIndex = todoList.findIndex(function (singleTodo) {
