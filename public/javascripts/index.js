@@ -1,5 +1,21 @@
 let todoList = [];
 
+$(document).ready(function(){
+    $.ajax({
+        type : "GET",
+        url : "http://localhost:3000/getList",
+        dataType : "text",
+        error : function(){
+            alert('통신실패!!');
+        },
+        success : function(data){
+            todoList = JSON.parse(data)
+            sortElementsById();
+        }  
+    });
+});
+
+
 let pageList = new Array();
 let currentPage = 1;
 let numberPerPage = 5;
@@ -24,6 +40,13 @@ function newElement() {
             'todo': todo,
             'id': 'todo' + newTodoId
         };
+
+    $.ajax({
+        type : "GET",
+        url : `http://localhost:3000/postList?id=todo${newTodoId}&todo=${todo}`,
+        dataType : "text"
+    });
+
     todoList.push(newTodo);
     sortElementsById();
     clearFields();
@@ -49,6 +72,11 @@ function clearFields() {
 
 function deleteElement(event) {
     let idOfEltToBeDeleted = event.target.parentElement.id;
+    $.ajax({
+        type : "GET",
+        url : `http://localhost:3000/deleteList?id=${idOfEltToBeDeleted}`,
+        dataType : "text"
+    });
     let arrayIndex = todoList.findIndex(function (singleTodo) {
         return singleTodo.id === idOfEltToBeDeleted;
     });
